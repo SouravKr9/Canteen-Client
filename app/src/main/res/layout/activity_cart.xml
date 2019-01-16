@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CartActivity">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".CartActivity"
+    android:id="@+id/activity_cart">
 
-    <ListView
-        android:id="@+id/cart_list"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ListView
+            android:id="@+id/cart_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="2sp"
+            android:gravity="start"
+            android:stretchMode="none" />
+
+    </RelativeLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="2sp"
-        android:gravity="start"
-        android:stretchMode="none" />
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
 
-</RelativeLayout>
+        <Button
+            android:id="@+id/pay_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_marginBottom="0dp"
+            android:background="@color/colorPayButton"
+            android:paddingBottom="0dp"
+            android:textSize="@dimen/bootstrap_h3_text_size"
+            android:text="Pay" />
+
+    </LinearLayout>
+
+
+</FrameLayout>

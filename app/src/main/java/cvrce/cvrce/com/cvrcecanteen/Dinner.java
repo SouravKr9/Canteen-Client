@@ -33,6 +33,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 
 import nl.dionsegijn.steppertouch.OnStepCallback;
@@ -51,6 +52,7 @@ public class Dinner extends Fragment {
     HashMap<String, Integer> orderPrice = new HashMap<>();
     ListView listDinner;
     MyAdapterOne adaper;
+
 
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.dinner_fragment_layout, container, false);
